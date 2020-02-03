@@ -1,2 +1,13 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- {{ }} Mustache语法 -->
+<!-- 1小程序的数据绑定 -->
+<view>Hello {{ name }}</view>
+<view>我的年纪: {{ age + 20 }}</view>
+
+<!-- 2.列表展示 -->
+<view wx:for="{{ students }}">{{ item.name }}-{{item.age}}</view>
+
+<!-- 3.事件监听改变data -->
+<view>当前计数：{{ counter }}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handleBtnSub">-</button>
